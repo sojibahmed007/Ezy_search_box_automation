@@ -76,6 +76,22 @@ flowchart TD
 
 ---
 
+## Authentication Setup
+
+Login automation reads credentials from the `COMMUNITY_EMAIL` and
+`COMMUNITY_PASSWORD` environment variables. Set both variables before running
+`npm run save:auth`, `npm run test:search`, `npm run test:headed`, or
+`npm run break:search`. The generated `storageState.json` contains authenticated
+session data and is excluded from Git.
+
+In PowerShell, set them for the current terminal session with:
+
+```powershell
+$env:COMMUNITY_EMAIL = "you@example.com"
+$env:COMMUNITY_PASSWORD = "<your-password>"
+npm run save:auth
+```
+
 ## 🛠️ Files Created in Codebase
 
 1. **Page Object Model:**

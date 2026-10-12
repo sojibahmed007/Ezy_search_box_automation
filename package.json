@@ -1,0 +1,31 @@
+{
+  "name": "community-search-automation",
+  "version": "1.0.0",
+  "description": "Aggressive Search Box Break & Security Test Suite using Playwright TypeScript",
+  "main": "index.js",
+  "scripts": {
+    "test": "playwright test",
+    "test:headed": "playwright test --headed",
+    "test:ui": "playwright test --ui",
+    "test:report": "playwright show-report",
+    "test:debug": "playwright test --debug",
+    "test:search": "playwright test tests/search-box-break.spec.ts",
+    "test:search:headed": "playwright test tests/search-box-break.spec.ts --headed",
+    "break:search": "npx tsx scripts/test-search-break.ts",
+    "save:auth": "npx tsx scripts/save-auth.ts"
+  },
+  "keywords": [
+    "playwright",
+    "typescript",
+    "search-testing",
+    "security-testing"
+  ],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@playwright/test": "^1.50.0",
+    "@types/node": "^22.0.0",
+    "tsx": "^4.19.0",
+    "typescript": "^5.7.0"
+  }
+}
